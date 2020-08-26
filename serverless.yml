@@ -12,3 +12,6 @@ functions:
       - http:
           path: hello
           method: GET
+
+plugins:
+  - serverless-mocha-plugin

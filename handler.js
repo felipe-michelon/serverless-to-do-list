@@ -7,5 +7,5 @@ module.exports.hello = (event, context, callback) =>  {
     headers: { 'Content-Type': 'text/plain' }
   }
 
-  callback(null,response);
+  callback(null, response);
 };
