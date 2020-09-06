@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "serverless-functions-base-path": "^1.0.32"
+  },
   "devDependencies": {
     "serverless-mocha-plugin": "^1.12.0"
   }

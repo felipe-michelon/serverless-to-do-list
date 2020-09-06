@@ -18,6 +18,9 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
+custom:
+  functionsBasePath: src/handlers
+
 functions:
   hello:
     handler: handler.hello
@@ -28,3 +31,4 @@ functions:
 
 plugins:
   - serverless-mocha-plugin
+  - serverless-functions-base-path

@@ -2,7 +2,7 @@
 
 const mochaPlugin = require('serverless-mocha-plugin');
 const expect = mochaPlugin.chai.expect;
-let wrapped = mochaPlugin.getWrapper('hello', '/handler.js', 'hello');
+let wrapped = mochaPlugin.getWrapper('hello', '/src/handlers/handler.js', 'hello');
 
 describe('hello', () => {
   let response;
