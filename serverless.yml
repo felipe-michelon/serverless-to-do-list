@@ -48,6 +48,14 @@ functions:
           method: DELETE
           cors: true
 
+  update:
+    handler: update.update
+    events:
+      - http:
+          path: todos/{id}
+          method: PUT
+          cors: true
+
 resources:
   Resources:
     TodosDynamoDbTable:
