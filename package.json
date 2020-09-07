@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "serverless-functions-base-path": "^1.0.32"
+    "serverless-functions-base-path": "^1.0.32",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "serverless-mocha-plugin": "^1.12.0",

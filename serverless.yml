@@ -32,6 +32,14 @@ functions:
           method: GET
           cors: true
 
+  create:
+    handler: create.create
+    events:
+      - http:
+          path: todos
+          method: POST
+          cors: true
+
 resources:
   Resources:
     TodosDynamoDbTable:
