@@ -40,6 +40,14 @@ functions:
           method: POST
           cors: true
 
+  delete:
+    handler: delete.delete
+    events:
+      - http:
+          path: todos/{id}
+          method: DELETE
+          cors: true
+
 resources:
   Resources:
     TodosDynamoDbTable:
