@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "serverless-finch": "^2.6.0",
     "serverless-functions-base-path": "^1.0.32",
     "uuid": "^8.3.0"
   },

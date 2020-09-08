@@ -8,6 +8,8 @@ provider:
   region: us-east-1
   environment:
     DYNAMODB_TABLE: ${self:service}-${self:provider.stage}
+    BUCKET_NAME: ${self:service}-${self:provider.stage}
+    BASE_URL: ${cf:${self:service}-${self:provider.stage}.ServiceEndpoint}
 
   iamRoleStatements:
     - Effect: Allow
@@ -22,6 +24,11 @@ provider:
 
 custom:
   functionsBasePath: src/handlers
+
+  client:
+    bucketName: ${self:provider.environment.BUCKET_NAME}
+    distributionFolder: src/todo-app/build
+    indexDocument: index.html
 
 functions:
   list:
@@ -78,3 +85,4 @@ resources:
 plugins:
   - serverless-mocha-plugin
   - serverless-functions-base-path
+  - serverless-finch
