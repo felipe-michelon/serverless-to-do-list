@@ -1,0 +1,10 @@
+[
+  {
+    "text": "item 1",
+    "checked": false
+  },
+  {
+    "text": "item 2",
+    "checked": true
+  }
+]
