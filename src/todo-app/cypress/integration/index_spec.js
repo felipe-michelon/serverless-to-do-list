@@ -10,12 +10,12 @@ describe('When visiting the home page', () => {
 
   it('shows the properties of each item', () => {
     cy.get('div.TodoItem:first').within(() => {
-      cy.contains('item 1')
+      cy.contains('span', 'item 1')
       cy.get('[type="checkbox"]').should('not.have.attr', 'checked')
     })
 
     cy.get('div.TodoItem:last').within(() => {
-      cy.contains('item 2')
+      cy.contains('strike', 'item 2')
       cy.get('[type="checkbox"]').should('have.attr', 'checked')
     })
   })

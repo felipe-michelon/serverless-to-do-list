@@ -14,7 +14,7 @@ function TodoList() {
   useEffect(fetch, [])
 
   return items.map(item => (
-    <TodoItem item={item} />
+    <TodoItem item={item} onChange={fetch} key={item.id}/>
   ))
 }
 
