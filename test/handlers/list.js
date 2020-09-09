@@ -35,6 +35,10 @@ describe('list', () => {
       it('should return parsed data from the database', () => {
         expect(response.body).to.equal(JSON.stringify(returnedData));
       });
+
+      it('should return that anywhere can receive the response', () => {
+        expect(response.headers['Access-Control-Allow-Origin']).to.equal('*');
+      });
     });
 
     describe('and there is a problem on the database', () => {

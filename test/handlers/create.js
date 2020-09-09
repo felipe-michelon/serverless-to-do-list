@@ -40,6 +40,10 @@ describe('create', () => {
           expect(response.headers['Content-Type']).to.equal('application/json');
         });
 
+        it('should return that anywhere can receive the response', () => {
+          expect(response.headers['Access-Control-Allow-Origin']).to.equal('*');
+        });
+
         it('should return the saved item', () => {
           const currentDate = new Date().getTime()
 

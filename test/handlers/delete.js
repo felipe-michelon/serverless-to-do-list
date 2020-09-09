@@ -30,6 +30,11 @@ describe('delete', () => {
       it('should return a null body', () => {
         expect(response.body).to.equal(null);
       });
+
+
+      it('should return that anywhere can receive the response', () => {
+        expect(response.headers['Access-Control-Allow-Origin']).to.equal('*');
+      });
     });
 
     describe('and there is a problem on the database', () => {

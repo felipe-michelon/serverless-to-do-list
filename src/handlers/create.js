@@ -41,7 +41,10 @@ module.exports.create = (event, context, callback) => {
 
     const response = {
       statusCode: 201,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
       body: JSON.stringify(databaseParams.Item),
     };
     callback(null, response);

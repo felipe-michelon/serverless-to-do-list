@@ -24,6 +24,9 @@ module.exports.delete = (event, context, callback) => {
 
     const response = {
       statusCode: 204,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
       body: null,
     };
     callback(null, response);

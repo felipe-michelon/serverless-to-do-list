@@ -40,6 +40,10 @@ describe('update', () => {
           expect(parsedResponse.text).to.equal('new text');
           expect(parsedResponse.checked).to.equal(true);
         });
+
+        it('should return that anywhere can receive the response', () => {
+          expect(response.headers['Access-Control-Allow-Origin']).to.equal('*');
+        });
       });
 
       describe('and there is a problem on the database', () => {
