@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
+import './TodoList.css'
+
 import {getTodos} from '../../api/todos'
 import TodoItem from '../TodoItem/'
 import CreateTodoItem from '../CreateTodoItem/'
@@ -16,12 +18,15 @@ function TodoList() {
 
   return (
     <div>
-      <CreateTodoItem onChange={fetch} />
-      <br />
+      <div className="CreateTodo">
+        <CreateTodoItem onChange={fetch} />
+      </div>
 
-      {items.map(item => (
-        <TodoItem item={item} onChange={fetch} key={item.id}/>
-      ))}
+      <div className="TodoItems">
+        {items.map(item => (
+          <TodoItem item={item} onChange={fetch} key={item.id}/>
+        ))}
+      </div>
     </div>
   )
 }
