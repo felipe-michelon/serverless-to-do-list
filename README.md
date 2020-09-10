@@ -75,5 +75,13 @@ npx cypress run
 npx cypress open
 ```
 
+## Project architecture
+This project is a **POC** of running simple tasks on a serverless architecture, while trying to keep it running free or at an extremely low cost.
+This is an illustration of how it's designed today:
+![Project Architecture](./project_architecture.png)
+
+Users can use a globally shared todo list using the react app, as a frontend (stored on S3), or doing web request directly to the API Gateway.
+After that, a lambda is triggered (depending on the path that was requested), and do an action using the dynamoDB.
+
 ## License
 [MIT-LICENSE](LICENSE)
