@@ -1,4 +1,17 @@
 .TodoItem {
-  width: 100%;
   margin: 10px 0px;
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.TodoItem span, strike{
+  margin: 0px 10px
+}
+
+.TodoItem img {
+  height: calc(10px + 2vmin);
+  width: auto;
+  cursor: pointer;
 }
