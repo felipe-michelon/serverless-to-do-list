@@ -1,0 +1,18 @@
+.CreateTodoItem {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.CreateTodoItem input[type="text"] {
+  font-size: inherit;
+  border-radius: 3px;
+  margin-right: 10px;
+  background: #333842;
+  border: none;
+  color: inherit;
+}
+
+.CreateTodoItem button {
+  cursor: pointer;
+}
